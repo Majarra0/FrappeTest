@@ -1,7 +1,7 @@
 app_name = "crud_demo"
 app_title = "Crud Demo"
-app_publisher = "Ahmed"
-app_description = "CRUD"
+app_publisher = "me"
+app_description = "app"
 app_email = "ahmedeloday@gmail.com"
 app_license = "mit"
 

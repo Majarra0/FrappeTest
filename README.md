@@ -1,6 +1,6 @@
 ### Crud Demo
 
-CRUD
+app
 
 ### Installation
 
