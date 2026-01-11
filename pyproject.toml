@@ -3,7 +3,7 @@ name = "crud_demo"
 authors = [
     { name = "Ahmed", email = "ahmedeloday@gmail.com"}
 ]
-description = "It's a demo for CRUD operations in Frappe"
+description = "CRUD"
 requires-python = ">=3.14"
 readme = "README.md"
 dynamic = ["version"]

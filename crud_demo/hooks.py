@@ -1,7 +1,7 @@
 app_name = "crud_demo"
 app_title = "Crud Demo"
 app_publisher = "Ahmed"
-app_description = "It\'s a demo for CRUD operations in Frappe"
+app_description = "CRUD"
 app_email = "ahmedeloday@gmail.com"
 app_license = "mit"
 
