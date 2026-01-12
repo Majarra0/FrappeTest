@@ -33,7 +33,7 @@ def get_all_tasks():
 	return tasks
 
 @frappe.whitelist()
-def get_task(id:int):
+def get_task(id):
 	if not id:
 		frappe.throw(_("Id is required"))
 	if not check_existence(id):
@@ -44,7 +44,7 @@ def get_task(id:int):
 	return task
 	
 @frappe.whitelist()
-def delete_task(id:int):
+def delete_task(id):
 	if not id:
 		frappe.throw(_("Id is required"))
 		
