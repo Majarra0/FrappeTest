@@ -1,50 +1,62 @@
+// Global Tasks JS (console-focused, no Promise noise)
+
+function frappeCallPromise(options) {
+	return new Promise((resolve, reject) => {
+		frappe.call({
+			...options,
+			callback(r) {
+				resolve(r.message);
+			},
+			error(err) {
+				reject(err);
+			},
+		});
+	});
+}
+
 frappe.after_ajax(function () {
 	console.log("GLOBAL TASKS JS LOADED");
 
-	window.createTask = function (title, description = null) {
-		frappe.call({
+	// Create task
+	window.createTask = async function (title, description = null) {
+		const result = await frappeCallPromise({
 			method: "crud_demo.crud_demo.doctype.tasks.tasks.create_task",
 			args: { title, description },
-			callback(r) {
-				if (r.message) {
-					frappe.msgprint(r.message.message);
-				}
-			},
 		});
+
+		console.log(result);
+		return result;
 	};
 
-	window.getAllTasks = function (callback) {
-		frappe.call({
+	// Get all tasks
+	window.getAllTasks = async function () {
+		const result = await frappeCallPromise({
 			method: "crud_demo.crud_demo.doctype.tasks.tasks.get_all_tasks",
-			callback(r) {
-				if (r.message && callback) {
-					callback(r.message);
-				}
-			},
 		});
+
+		console.log(result);
+		return result;
 	};
 
-	window.getTask = function (taskId, callback) {
-		frappe.call({
+	// Get task by ID
+	window.getTask = async function (taskId) {
+		const result = await frappeCallPromise({
 			method: "crud_demo.crud_demo.doctype.tasks.tasks.get_task",
 			args: { id: taskId },
-			callback(r) {
-				if (r.message && callback) {
-					callback(r.message);
-				}
-			},
 		});
+
+		console.log(result);
+		return result;
 	};
 
-	window.deleteTask = function (taskId) {
-		frappe.call({
+	// Delete task
+	window.deleteTask = async function (taskId) {
+		const result = await frappeCallPromise({
 			method: "crud_demo.crud_demo.doctype.tasks.tasks.delete_task",
 			args: { id: taskId },
-			callback(r) {
-				if (r.message) {
-					frappe.msgprint(r.message.message);
-				}
-			},
 		});
+
+		console.log(result);
+		return result;
 	};
 });
