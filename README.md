@@ -1,6 +1,27 @@
-### Crud Demo
+## Tasks Module
 
-me
+A simple Tasks module built with the Frappe Framework that provides basic task management through server-side APIs.
+
+### Features
+
+- Create tasks with a title and optional description
+- Retrieve a single task by ID
+- List all tasks
+- Delete tasks with validation
+
+### DocType
+
+#### Tasks
+
+task_name – Task title
+task_desc – Optional description
+
+### API Methods
+
+- create_task(title, description=None)
+- get_all_tasks()
+- get_task(id)
+- delete_task(id)
 
 ### Installation
 
