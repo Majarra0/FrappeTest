@@ -5,6 +5,10 @@ app_description = "me"
 app_email = "ahmedeloday@gmail.com"
 app_license = "mit"
 
+app_include_js = [
+    "/assets/crud_demo/js/tasks.js"
+]
+
 # Apps
 # ------------------
 

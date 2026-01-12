@@ -23,6 +23,14 @@ task_desc – Optional description
 - get_task(id)
 - delete_task(id)
 
+## Client-side JavaScript
+The module exposes global JavaScript helpers
+
+- createTask(title, description = null)
+- getAllTasks(callback)
+- getTask(id, callback)
+- deleteTask(id)
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
