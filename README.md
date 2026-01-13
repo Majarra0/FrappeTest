@@ -7,6 +7,10 @@ A simple Tasks module built with the Frappe Framework that provides basic task m
 - List all tasks
 - Delete tasks with validation
 
+### Frontend Notes
+- The task dashboard is accessible immediately; there is no login/sign-up flow in the sample frontend.
+- The modal accepts Enter to submit a task while Ctrl+Enter inserts a newline, and the description field is optional.
+
 ### DocType
 #### Tasks
 task_name – Task title
