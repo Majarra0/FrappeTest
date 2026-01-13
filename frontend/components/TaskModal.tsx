@@ -86,8 +86,13 @@ const TaskModal: React.FC<TaskModalProps> = ({
           </div>
 
           <div>
+            <label className="block text-sm font-semibold text-slate-700 mb-2">
+              Description{" "}
+              <span className="text-xs font-normal text-slate-400">
+                (optional)
+              </span>
+            </label>
             <textarea
-              required
               rows={4}
               value={taskDesc}
               onChange={(e) => setTaskDesc(e.target.value)}

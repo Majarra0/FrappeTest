@@ -10,7 +10,7 @@ View your app in AI Studio: https://ai.studio/apps/temp/1
 
 ## Authentication
 
-This front-end now assumes an open workspace—no login screen appears and the task dashboard is available immediately. The modal accepts Enter to submit a task and Ctrl+Enter to insert a newline inside the description.
+This front-end now assumes an open workspace—no login screen appears and the task dashboard is available immediately. The modal accepts Enter to submit a task and Ctrl+Enter to insert a newline inside the description, which is treated as optional.
 
 ## Run Locally
 
