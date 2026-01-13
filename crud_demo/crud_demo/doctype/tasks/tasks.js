@@ -7,7 +7,21 @@ frappe.ui.form.on("Tasks", {
 	},
 });
 
-
+window.updateTask = function (taskId, title, description = null) {
+ frappe.call({
+  method: "crud_demo.crud_demo.doctype.tasks.tasks.update_task",
+  args: {
+   id: taskId,
+   title: title,
+   description: description,
+  },
+  callback(r) {
+   if (r.message) {
+    frappe.msgprint(r.message.message);
+   }
+  },
+ });
+};
 	window.createTask = function (title, description = null) {
 		frappe.call({
 			method: "crud_demo.crud_demo.doctype.tasks.tasks.create_task",
