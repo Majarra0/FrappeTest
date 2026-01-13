@@ -1,0 +1,8 @@
+
+{
+  "name": "FrappeFlow Task Dashboard",
+  "description": "A high-performance, aesthetically pleasing task management dashboard designed for Frappe backends, featuring real-time task tracking and an integrated AI assistant for task generation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
